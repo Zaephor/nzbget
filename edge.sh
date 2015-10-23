@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Stop the script if it's already intalled.
-if [[ -e /${HOME}/edge_installed ]]; then
+if [[ -e /tmp/edge_installed ]]; then
   exit 0
 fi
 
@@ -69,4 +69,4 @@ if [[ -n $EDGE ]]; then
 fi
 
 # Mark edge as installed
-touch /${HOME}/edge_installed
+touch /tmp/edge_installed
