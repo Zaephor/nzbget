@@ -1,7 +1,6 @@
 FROM phusion/baseimage:0.9.11
 MAINTAINER needo <needo@superhero.org>
 ENV DEBIAN_FRONTEND noninteractive
-ENV EDGE 15.0
 
 # Set correct environment variables
 ENV HOME /root
@@ -27,6 +26,7 @@ EXPOSE 6789
 # Add edge.sh to execute during container startup
 RUN mkdir -p /etc/my_init.d
 ADD edge.sh /etc/my_init.d/edge.sh
+ENV EDGE 15.0
 RUN chmod +x /etc/my_init.d/edge.sh
 
 # Add firstrun.sh to execute during container startup
