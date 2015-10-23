@@ -28,6 +28,7 @@ RUN mkdir -p /etc/my_init.d
 ADD edge.sh /etc/my_init.d/edge.sh
 ENV EDGE 15.0
 RUN chmod +x /etc/my_init.d/edge.sh
+RUN /etc/my_init.d/edge.sh
 
 # Add firstrun.sh to execute during container startup
 ADD firstrun.sh /etc/my_init.d/firstrun.sh
