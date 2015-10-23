@@ -1,6 +1,7 @@
 FROM phusion/baseimage:0.9.11
 MAINTAINER needo <needo@superhero.org>
 ENV DEBIAN_FRONTEND noninteractive
+ENV EDGE 15.0
 
 # Set correct environment variables
 ENV HOME /root
