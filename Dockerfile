@@ -16,7 +16,7 @@ RUN usermod -u 99 nobody
 RUN usermod -g 100 nobody
 
 ADD sources.list /etc/apt/
-RUN add-apt-repository ppa:mc3man/trusty-media
+RUN add-apt-repository -y -s ppa:mc3man/trusty-media
 RUN apt-get update -qq
 RUN apt-get install -qy ffmpeg nzbget wget unrar unzip p7zip
 
@@ -29,7 +29,7 @@ EXPOSE 6789
 # Add edge.sh to execute during container startup
 RUN mkdir -p /etc/my_init.d
 ADD edge.sh /etc/my_init.d/edge.sh
-ENV EDGE="17.0"
+ENV EDGE="v16.4"
 RUN chmod +x /etc/my_init.d/edge.sh
 RUN /etc/my_init.d/edge.sh
 
